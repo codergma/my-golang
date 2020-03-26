@@ -45,12 +45,13 @@
 9. 打印 p w.Op
 
 ## delve
-> 由于gdb对golang支持比较差，只能支持一些简单的功能,比如断点，单步等，但对goroutine, 内置对象的打印等还是不怎么好。所以go有了自己的debug工具delve
-###安装
+> 由于gdb对golang支持比较差，只能支持一些简单的功能,比如断点，单步等，但对goroutine, 内置对象的打印等还是不怎么好。所以go有了自己的debug工具delve 
+
+## 安装
 > https://github.com/derekparker/delve
 > go get -u github.com/go-delve/delve/cmd/dlv
 
-### 准备工作
+## 准备工作
 1. 编译
 2. 带参数启动 dlv exec ./main -- 参数1 参数2
 3. dlv attach pid
