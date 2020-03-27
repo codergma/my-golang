@@ -46,6 +46,7 @@
 
 ## delve
 > 由于gdb对golang支持比较差，只能支持一些简单的功能,比如断点，单步等，但对goroutine, 内置对象的打印等还是不怎么好。所以go有了自己的debug工具delve
+
 ###安装
 > https://github.com/derekparker/delve
 > go get -u github.com/go-delve/delve/cmd/dlv
@@ -78,7 +79,13 @@
 7. 客户端发送一个请求 ./main -server=false
 8. 运行至断点 c
 9. 打印 p w.Op
-
+10. ...
+### (3)远程调试
+1. 启动服务端 dlv exec --headless --continue --listen :4040 --accept-multiclient ./main -- -server=true
+2. 远程连接服务端开始调试 dlv connect  10.96.77.160:4040
+3. 设置一个断点
+4. 客户端发送请求 ./main -server=false
+5. ...
 
 
 
