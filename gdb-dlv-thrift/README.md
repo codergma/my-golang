@@ -63,7 +63,7 @@
 ### (1)调试thrif客户端程序，查看发送rpc请求过程
 1. go build -gcflags="-N -l" main.go client.go  handler.go  server.go
 2. 启动服务端 nohup ./main -server=true &
-3. 启动客户端 dlv exec ./main -server=false
+3. 启动客户端 dlv exec ./main -- -server=false
 5. 设置断点 b gdb-dlv-thrift/client.go:40
 6. 查看断点 bp
 7. 运行至断点 c
